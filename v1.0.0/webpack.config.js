@@ -44,7 +44,15 @@ module.exports = {
           { loader: 'px2-loader' },
           { loader: 'css-loader', options: { importLoaders: 2 } },
           { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader' },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                'src/variables.scss',
+              ].map(p => path.resolve(__dirname, p))
+            }
+          }
         ]
       },
       {

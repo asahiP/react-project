@@ -19,4 +19,5 @@ Webpack project configuration
     - webpack-dev-server
       - 热更新
     - px2-loader
+    - sass-resources-loader
 
